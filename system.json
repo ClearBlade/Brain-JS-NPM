@@ -1,0 +1,9 @@
+{
+    "auth": true,
+    "description": "",
+    "messaging_url": "staging.clearblade.com:1883",
+    "name": "BrainJSNode",
+    "platform_url": "https://staging.clearblade.com",
+    "system_key": "92eeddd80bacf1d5e1cfcb84bcd801",
+    "system_secret": "92EEDDD80BF2C2A78C90BEE4F901"
+}
