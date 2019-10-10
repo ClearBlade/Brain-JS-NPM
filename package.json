@@ -35,7 +35,7 @@
   "gateways": [],
   "name": "Brain-JS-NPM",
   "private": false,
-  "image_url": "https://i.imgur.com/vfxU9cp.png",
+  "image_url": "https://i.imgur.com/ng53S83.png",
   "dependencies": {
     "some_clearblade_lib": "latest",
     "http": "latest"
