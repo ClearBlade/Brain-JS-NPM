@@ -1,6 +1,6 @@
 {
   "author": "Rajas Deshpande <rdeshpande@clearblade.com>",
-  "description": "Brain JS NPM",
+  "description": "Brain JS",
   "asset_types": [
     "System",
     "Code Libraries",
@@ -33,7 +33,7 @@
   ],
   "protocols": [],
   "gateways": [],
-  "name": "Brain-JS-NPM",
+  "name": "Brain-JS",
   "private": false,
   "image_url": "https://i.imgur.com/ng53S83.png",
   "dependencies": {
@@ -45,12 +45,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ClearBlade/Brain-JS-NPM"
+    "url": "https://github.com/ClearBlade/Brain-JS"
   },
   "bugs": {
-    "url": "https://github.com/ClearBlade/Brain-JS-NPM/issues"
+    "url": "https://github.com/ClearBlade/Brain-JS/issues"
   },
-  "homepage": "https://github.com/ClearBlade/Brain-JS-NPM#readme",
+  "homepage": "https://github.com/ClearBlade/Brain-JS#readme",
   "devDependencies": {
     "jsdoc-to-markdown": "^4.0.1"
   }
