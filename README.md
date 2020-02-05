@@ -10,7 +10,7 @@
 
 ## Overview
 
-Decision Trees can be implemented to run on the ClearBlade Platform for classification and regression purposes.
+Neural Networks can be implemented using the Brain-JS library to run on the ClearBlade Platform for classification purposes.
 
 This is an ipm package, which contains one or more reusable assets within the ipm Community. The 'package.json' in this repo is a ipm spec's package.json, [here](https://docs.clearblade.com/v/3/6-ipm/spec), which is a superset of npm's package.json spec, [here](https://docs.npmjs.com/files/package.json).
 
@@ -24,7 +24,7 @@ https://platform.clearblade.com/
 ```
 2. Click on **Add System** -> **Advanced** and copy the link of this repository in the box.
 ```
-https://github.com/ClearBlade/decision-trees
+https://github.com/ClearBlade/brain-js
 ```
 3. Click **Create**
 4. You can now access this system in the platform.
