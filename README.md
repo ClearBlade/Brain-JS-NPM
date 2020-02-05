@@ -6,6 +6,7 @@
 ### [System Installation](#system-installation)
 ### [Steps for Transpilation to ES5](#transpilation-to-es5)
 ### [Usage](#usage-1)
+### [API](#api-1)
 ### [Assets](#assets-1)
 
 ## Overview
@@ -92,6 +93,8 @@ Follow these [steps](https://github.com/ClearBlade/Machine-Learning-Node-Librari
 ```
 
 - The implementation of this library is done in the [smoke test](https://github.com/ClearBlade/brain-js/blob/master/code/services/BrainJSSmokeTest/BrainJSSmokeTest.js) and you can refer to the [**Official Documentation**](https://github.com/BrainJS/brain.js) of that library to explore more options that you can use.  
+
+## API
 
 ## Assets
 
