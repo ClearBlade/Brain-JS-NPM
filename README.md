@@ -1,1 +1,1 @@
-# Brain-JS-NPM
+# Brain-JS
