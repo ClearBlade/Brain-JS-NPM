@@ -37,7 +37,7 @@ Follow these [steps](https://github.com/ClearBlade/Machine-Learning-Node-Librari
 
 - This IPM package consists of a Neural Networks Library that can be imported in the ClearBlade Platform in order to train and test machine learning models on the platform.
 
-- A brief tutorial about how to desing neural networks with the Brain-JS library can be found [here](https://scrimba.com/g/gneuralnetworks)
+- A brief tutorial about how to design neural networks with the Brain-JS library can be found [here](https://scrimba.com/g/gneuralnetworks)
 
 - The following code snippet loads the Brain JS library and allows your code to access functionality of the library APIs via the **brain** variable.
 
@@ -45,7 +45,7 @@ Follow these [steps](https://github.com/ClearBlade/Machine-Learning-Node-Librari
   var brain = BrainJS();
 ```
 
-- Once we define the **brain** variable, we configure the neural networks by providing different hyperparameters. The hyperparameters can be adjusted according to the user to get the best classification accuracy. There are different hyperparameters that can be provided. In this example, we have provided two hyperparameters viz. **activation** which introduces non-linearity and **hiddenLayers** which basically defines the number of neurons in the hidden layers. In this case, there are 2 hidden layers and there are 64 neurons in the first layer and 128 neurons in the second layer. More options for hyperparameters can be found [here](https://github.com/BrainJS/brain.js#examples). 
+- Once we define the **brain** variable, we configure the neural networks by providing different hyperparameters. The hyperparameters can be adjusted according to the user to get the best classification accuracy. There are different hyperparameters that can be provided. In this example, we have provided two hyperparameters viz. **activation** which introduces non-linearity and **hiddenLayers** which defines the number of neurons in the hidden layers. 
 
 ``` javascript
   var net = new brain.NeuralNetwork({
@@ -53,6 +53,7 @@ Follow these [steps](https://github.com/ClearBlade/Machine-Learning-Node-Librari
     hiddenLayers: [64, 128]
   });
 ```
+- In this case, there are 2 hidden layers and there are 64 neurons in the first layer and 128 neurons in the second layer. More options for hyperparameters can be found [here](https://github.com/BrainJS/brain.js#examples). 
  
 - After configuring the neural network, the training data can be set up as shown below. This data includes Readings recorded from 3 sensors (Power, Temperature and Accelerometer) inside a machine. The training labels are also defined which give information about whether a maintenance was required for a given set of sensor values. ( 0 - Maintenance Not Required; 1 - Maintenance Required )
 
