@@ -35,76 +35,62 @@ Follow these [steps](https://github.com/ClearBlade/Machine-Learning-Node-Librari
 
 ## Usage
 
-- This IPM package consists of a Decision Tree Library that can be imported in the ClearBlade Platform in order to train and test machine learning models on the platform. This library can be used to perform classification and regression.
+- This IPM package consists of a Neural Networks Library that can be imported in the ClearBlade Platform in order to train and test machine learning models on the platform.
 
-- The API documentation for this library can be found [here](http://mljs.github.io/decision-tree-cart/)
+- A brief tutorial about how to desing neural networks with the Brain-JS library can be found [here](https://scrimba.com/g/gneuralnetworks)
 
-- The following code snippet loads the Decision Tree library and allows your code to access functionality of the library APIs via the **model** variable.
+- The following code snippet loads the Brain JS library and allows your code to access functionality of the library APIs via the **brain** variable.
 
 ``` javascript
-  var model = getTree();
+  var brain = BrainJS();
 ```
 
-- Once we define the **model** variable, the Decision Tree library can be implemented as a classifier which is shown below. This library currently supports **gini** as the gain function which determines the best split at a given point of time. The maxDepth parameter determines the maximum depth of the tree.
+- Once we define the **brain** variable, we configure the neural networks by providing different hyperparameters. The hyperparameters can be adjusted according to the user to get the best classification accuracy. There are different hyperparameters that can be provided. In this example, we have provided two hyperparameters viz. **activation** which introduces non-linearity and **hiddenLayers** which basically defines the number of neurons in the hidden layers. In this case, there are 2 hidden layers and there are 64 neurons in the first layer and 128 neurons in the second layer. More options for hyperparameters can be found [here](https://github.com/BrainJS/brain.js#examples). 
 
 ``` javascript
-  var classifier = new model.DecisionTreeClassifier({ 
-    gainFunction: "gini", 
-    maxDepth: 10, 
-    minNumSamples: 3}); 
+  var net = new brain.NeuralNetwork({
+    activation: "relu",
+    hiddenLayers: [64, 128]
+  });
 ```
  
-- After configuring the classifier, the training data can be set up as shown below. This data includes Readings recorded from 3 sensors (Power, Temperature and Accelerometer) inside a machine. The training labels are also defined which give information about whether a maintenance was required for a given set of sensor values. ( 0 - Maintenance Not Required; 1 - Maintenance Required )
+- After configuring the neural network, the training data can be set up as shown below. This data includes Readings recorded from 3 sensors (Power, Temperature and Accelerometer) inside a machine. The training labels are also defined which give information about whether a maintenance was required for a given set of sensor values. ( 0 - Maintenance Not Required; 1 - Maintenance Required )
 
 ``` javascript
-  var training_data = [
-      [1350, 73.4, 0.0683], 
-      [1350, 73.4, 0.0685], 
-      [1532, 83.1, 0.5272], 
-      [1710, 77.3, 1.721], 
-      [1200, 76.6, 0.0688], 
-      [1820, 82.1, 0.4333], 
-      [1421, 75.4, 0.0695], 
-      [1800, 95.1, 1.9], 
-      [1520, 82.4, 0.4272], 
-      [1740, 95.0, 1.715]
-  ];
-      
-  var training_labels = [0, 0, 0, 1, 0, 1, 0, 1, 0, 1];
+  var trainingData = [
+    { input : { power: 1350, temperature: 73.4, accelerometer: 0.0683 }, output: { not_required : 0 } },
+    { input : { power: 1350, temperature: 73.4, accelerometer: 0.0685 }, output: { not_required : 0 } }, 
+    { input : { power: 1532, temperature: 83.1, accelerometer: 0.5272 }, output: { not_required : 0 } },
+    { input : { power: 1710, temperature: 77.3, accelerometer: 1.7210 }, output: { required : 1 } }, 
+    { input : { power: 1200, temperature: 76.6, accelerometer: 0.0688 }, output: { not_required : 0 } },
+    { input : { power: 1820, temperature: 82.1, accelerometer: 0.4333 }, output: { required : 1 } },
+    { input : { power: 1421, temperature: 75.4, accelerometer:0.0695 }, output: { not_required : 0 } },
+    { input : { power: 1800, temperature: 95.1, accelerometer: 1.9000 }, output: { required : 1 } },
+    { input : { power: 1520, temperature: 82.4, accelerometer: 0.4272 }, output: { not_required : 0 } },
+    { input : { power: 1740, temperature: 95.0, accelerometer: 1.7150 }, output: { required : 1 } },
+  ]
 ```
 
-- Using the training data and training labels, train the classifier as follows-
+- Using this training data, train the classifier as follows-
 
 ``` javascript
-  classifier.train(training_dataset, training_labels);
+  net.train( 
+    trainingData,     
+    {
+      iterations: 100,
+      learningRate: 0.1,
+      log: true,
+      logPeriod: 10
+    }
+  );
 ```
 
 - Once the classifer is trained, predict for a given set of sensor values, if a maintenance is required or not.
 ``` javascript
-  var test_data = [[1780, 95.5, 1.812]];
-  var output = classifier.predict(test_data);
+  var prediction = net.run({ power: 1780, temperature: 95.5, accelerometer: 1.8120 });
 ```
 
-- This library can also be used for performing regression tasks as well. The code snippet is shown below:
-``` javascript
-  var model = getTree();
-  
-  var reg = new model.DecisionTreeRegression({
-    gainFunction: "regression",
-    minNumSamples: 3,
-    maxDepth: 10
-  });
-  
-  var feature_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-  var feature_2 = [73.4, 76.2, 62.3, 80.2, 100, 94, 88.3, 70, 78, 83, 83, 91, 74, 68, 84, 81, 90, 94, 103, 99];
-  
-  reg.train(feature_1, feature_2);
-  
-  var test_data = [[24]]
-  var output = classifier.predict(test_data);  
-```
-
-- The implementation of this library is done in the [smoke test](https://github.com/ClearBlade/decision-trees/blob/master/code/services/DecisionTreeSmokeTest/DecisionTreeSmokeTest.js) and you can refer to the [**Official Documentation**](https://github.com/mljs/decision-tree-cart) of that library to explore more options that you can use.  
+- The implementation of this library is done in the [smoke test](https://github.com/ClearBlade/brain-js/blob/master/code/services/BrainJSSmokeTest/BrainJSSmokeTest.js) and you can refer to the [**Official Documentation**](https://github.com/BrainJS/brain.js) of that library to explore more options that you can use.  
 
 ## Assets
 
