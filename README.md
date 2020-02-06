@@ -66,6 +66,7 @@ Follow these [steps](https://github.com/ClearBlade/Machine-Learning-Node-Librari
     hiddenLayers: [64, 128]
   });
 ```
+
 - More options for hyperparameters can be found [here](https://github.com/BrainJS/brain.js#examples). 
  
 - After configuring the neural network, the training data can be set up as shown below. This data includes Readings recorded from 3 sensors (Power, Temperature and Accelerometer) inside a machine. The training labels are also defined which give information about whether a maintenance was required for a given set of sensor values. ( 0 - Maintenance Not Required; 1 - Maintenance Required )
