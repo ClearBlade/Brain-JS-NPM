@@ -58,8 +58,8 @@ Follow these [steps](https://github.com/ClearBlade/Machine-Learning-Node-Librari
 ```
 
 - Once we define the **brain** variable, we configure the neural networks by providing different hyperparameters. The hyperparameters can be adjusted according to the user to get the best classification accuracy. There are different hyperparameters that can be provided. 
-  - In this example, we have provided two hyperparameters viz. **activation** which introduces non-linearity and **hiddenLayers** which defines the number of neurons in the hidden layers. 
-  - There are currently four supported activation functions: sigmoid (default), relu, leaky-relu, tanh. 
+  - In this example, we have provided two hyperparameters viz. **activation** which introduces non-linearity. There are currently four supported activation functions: sigmoid (default), relu, leaky-relu, tanh. 
+  -  The second hyperparameter is **hiddenLayers** which defines the number of neurons in the hidden layers. In this case, there are 2 hidden layers and there are 64 neurons in the first layer and 128 neurons in the second layer.
 
 ``` javascript
   var net = new brain.NeuralNetwork({
@@ -67,7 +67,7 @@ Follow these [steps](https://github.com/ClearBlade/Machine-Learning-Node-Librari
     hiddenLayers: [64, 128]
   });
 ```
-- In this case, there are 2 hidden layers and there are 64 neurons in the first layer and 128 neurons in the second layer. More options for hyperparameters can be found [here](https://github.com/BrainJS/brain.js#examples). 
+- More options for hyperparameters can be found [here](https://github.com/BrainJS/brain.js#examples). 
  
 - After configuring the neural network, the training data can be set up as shown below. This data includes Readings recorded from 3 sensors (Power, Temperature and Accelerometer) inside a machine. The training labels are also defined which give information about whether a maintenance was required for a given set of sensor values. ( 0 - Maintenance Not Required; 1 - Maintenance Required )
 
