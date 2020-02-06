@@ -6,7 +6,6 @@
 ### [System Installation](#system-installation)
 ### [Steps for Transpilation to ES5](#transpilation-to-es5)
 ### [Usage](#usage-1)
-### [API](#api-1)
 ### [Assets](#assets-1)
 
 ## Overview
@@ -47,7 +46,7 @@ Follow these [steps](https://github.com/ClearBlade/Machine-Learning-Node-Librari
   - brain.recurrent.RNN - Recurrent Neural Network or "RNN"
   - brain.recurrent.LSTM - Long Short Term Memory Neural Network or "LSTM"
   - brain.recurrent.GRU - Gated Recurrent Unit or "GRU"
-  - [Why different types of Neural Networks](https://github.com/BrainJS/brain.js#why-different-neural-network-types)
+  - [Why different types of Neural Networks?](https://github.com/BrainJS/brain.js#why-different-neural-network-types)
 
 - A brief tutorial about how to design neural networks with the Brain-JS library can be found [here](https://scrimba.com/g/gneuralnetworks)
 
@@ -86,7 +85,7 @@ Follow these [steps](https://github.com/ClearBlade/Machine-Learning-Node-Librari
   ]
 ```
 
-- Using this training data, train the classifier as follows-
+- Using this training data, train the classifier as follows. Different training options that can be given are prrovided [here](https://github.com/BrainJS/brain.js#training-options)
 
 ``` javascript
   net.train( 
@@ -100,16 +99,21 @@ Follow these [steps](https://github.com/ClearBlade/Machine-Learning-Node-Librari
   );
 ```
 
+- The output after training of the model:
+
+```
+{
+  error: 0.0039139985510105032,  // training error
+  iterations: 406                // training iterations
+}
+```
+
 - Once the classifer is trained, predict for a given set of sensor values, if a maintenance is required or not.
 ``` javascript
   var prediction = net.run({ power: 1780, temperature: 95.5, accelerometer: 1.8120 });
 ```
 
 - The implementation of this library is done in the [smoke test](https://github.com/ClearBlade/brain-js/blob/master/code/services/BrainJSSmokeTest/BrainJSSmokeTest.js) and you can refer to the [**Official Documentation**](https://github.com/BrainJS/brain.js) of that library to explore more options that you can use.  
-
-## API
-
-
 
 ## Assets
 
