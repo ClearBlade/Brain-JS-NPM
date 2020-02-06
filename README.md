@@ -38,6 +38,18 @@ Follow these [steps](https://github.com/ClearBlade/Machine-Learning-Node-Librari
 
 - This IPM package consists of a Neural Networks Library that can be imported in the ClearBlade Platform in order to train and test machine learning models on the platform.
 
+- This library currently supports implementation of 8 types of neural networks which are
+  - brain.NeuralNetwork - Feedforward Neural Network with backpropagation
+  - brain.NeuralNetworkGPU - Feedforward Neural Network with backpropagation, GPU version
+  - brain.recurrent.RNNTimeStep - Time Step Recurrent Neural Network or "RNN"
+  - brain.recurrent.LSTMTimeStep - Time Step Long Short Term Memory Neural Network or "LSTM"
+  - brain.recurrent.GRUTimeStep - Time Step Gated Recurrent Unit or "GRU"
+  - brain.recurrent.RNN - Recurrent Neural Network or "RNN"
+  - brain.recurrent.LSTM - Long Short Term Memory Neural Network or "LSTM"
+  - brain.recurrent.GRU - Gated Recurrent Unit or "GRU"
+
+- [Why different types of Neural Networks](https://github.com/BrainJS/brain.js#why-different-neural-network-types)
+
 - A brief tutorial about how to design neural networks with the Brain-JS library can be found [here](https://scrimba.com/g/gneuralnetworks)
 
 - The following code snippet loads the Brain JS library and allows your code to access functionality of the library APIs via the **brain** variable.
@@ -95,6 +107,8 @@ Follow these [steps](https://github.com/ClearBlade/Machine-Learning-Node-Librari
 - The implementation of this library is done in the [smoke test](https://github.com/ClearBlade/brain-js/blob/master/code/services/BrainJSSmokeTest/BrainJSSmokeTest.js) and you can refer to the [**Official Documentation**](https://github.com/BrainJS/brain.js) of that library to explore more options that you can use.  
 
 ## API
+
+
 
 ## Assets
 
