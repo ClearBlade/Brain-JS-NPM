@@ -47,8 +47,7 @@ Follow these [steps](https://github.com/ClearBlade/Machine-Learning-Node-Librari
   - brain.recurrent.RNN - Recurrent Neural Network or "RNN"
   - brain.recurrent.LSTM - Long Short Term Memory Neural Network or "LSTM"
   - brain.recurrent.GRU - Gated Recurrent Unit or "GRU"
-
-- [Why different types of Neural Networks](https://github.com/BrainJS/brain.js#why-different-neural-network-types)
+  - [Why different types of Neural Networks](https://github.com/BrainJS/brain.js#why-different-neural-network-types)
 
 - A brief tutorial about how to design neural networks with the Brain-JS library can be found [here](https://scrimba.com/g/gneuralnetworks)
 
