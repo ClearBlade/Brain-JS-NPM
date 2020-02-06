@@ -57,7 +57,9 @@ Follow these [steps](https://github.com/ClearBlade/Machine-Learning-Node-Librari
   var brain = BrainJS();
 ```
 
-- Once we define the **brain** variable, we configure the neural networks by providing different hyperparameters. The hyperparameters can be adjusted according to the user to get the best classification accuracy. There are different hyperparameters that can be provided. In this example, we have provided two hyperparameters viz. **activation** which introduces non-linearity and **hiddenLayers** which defines the number of neurons in the hidden layers. 
+- Once we define the **brain** variable, we configure the neural networks by providing different hyperparameters. The hyperparameters can be adjusted according to the user to get the best classification accuracy. There are different hyperparameters that can be provided. 
+  - In this example, we have provided two hyperparameters viz. **activation** which introduces non-linearity and **hiddenLayers** which defines the number of neurons in the hidden layers. 
+  - There are currently four supported activation functions: sigmoid (default), relu, leaky-relu, tanh. 
 
 ``` javascript
   var net = new brain.NeuralNetwork({
