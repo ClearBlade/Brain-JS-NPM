@@ -86,7 +86,7 @@ Follow these [steps](https://github.com/ClearBlade/Machine-Learning-Node-Librari
   ]
 ```
 
-- Using this training data, train the classifier as follows. Different training options that can be given are prrovided [here](https://github.com/BrainJS/brain.js#training-options)
+- Using this training data, train the classifier as follows. Different training options that can be given are provided [here](https://github.com/BrainJS/brain.js#training-options)
 
 ``` javascript
   net.train( 
