@@ -110,19 +110,19 @@ https://github.com/ClearBlade/brain-js
   var prediction = net.run({ power: 1780, temperature: 95.5, accelerometer: 1.8120 });
 ```
 
-- The implementation of this library is done in the [smoke test](https://github.com/ClearBlade/brain-js/blob/master/code/services/BrainJSSmokeTest/BrainJSSmokeTest.js) and you can refer to the [**Official Documentation**](https://github.com/BrainJS/brain.js) of that library to explore more options that you can use.  
+- The implementation of this library is done in the [smoke test](https://github.com/ClearBlade/brain-js/blob/master/code/services/BrainJSExample/BrainJSExample.js) and you can refer to the [**Official Documentation**](https://github.com/BrainJS/brain.js) of that library to explore more options that you can use.  
 
 ## Assets
 
 ### Libraries 
 
-| Library  | Description  | Official Documentation |   
-|---|---|---|
-| ``` BrainJS ```  | A Library to Implement Neural Networks | https://github.com/BrainJS/brain.js  | 
+| Library         | Description                            | Official Documentation              |
+| --------------- | -------------------------------------- | ----------------------------------- |
+| ``` BrainJS ``` | A Library to Implement Neural Networks | https://github.com/BrainJS/brain.js |
 
 ### Code Services
 
-``` BrainJSSmokeTest ``` : A code service to show working of BrainJS Library.
+``` BrainJSExample ``` : A code service to show working of BrainJS Library.
 
 ## Advanced
 

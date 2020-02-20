@@ -5,7 +5,7 @@
     "dependencies": "log,BrainJS",
     "execution_timeout": 60,
     "logging_enabled": true,
-    "name": "BrainJSSmokeTest",
+    "name": "BrainJSExample",
     "params": [
         "{}"
     ],
